@@ -1,0 +1,20 @@
+// import the express module
+import express from 'express';
+
+// Create an instance of an Express application
+const app = express();
+
+// Define the port number where our server will listen 
+const PORT = 3000;
+
+// define the root path ('/')
+app.get('/', (req, res) => {
+    //send text as a response to the client
+    res.send('Hola, Mundo!');
+});
+
+// Start the server and tell it listen on the port
+// Specifically above. Not the backticks!
+app.listen(PORT, () =>{
+    console.log(`Server is running at http://localhost:${PORT}`);
+});
